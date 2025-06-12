@@ -8,7 +8,7 @@ Um portal de notícias moderno com efeito parallax, comentários em tempo real e
 - 💬 Chat em tempo real por notícia
 - 🕸️ Web scraping automático de sites confiáveis
 - ⚡ Carregamento inteligente para melhor desempenho
-- 🛠️ Painel administrativo (opcional)
+  
 
 ---
 
