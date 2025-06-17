@@ -25,7 +25,15 @@ Um portal de notícias moderno com efeito parallax, comentários em tempo real e
 - [Express](https://expressjs.com/)
 - [Socket.IO](https://socket.io/) (chat em tempo real)
 - [MongoDB](https://www.mongodb.com/) (armazenamento de dados)
+```bash
+Dentro da pasta `/backend`:
+npm init
+npm install express cors
 
+Rode o servidor
+node index.js
+
+```
 ### Web Scraping
 - [Cheerio](https://cheerio.js.org/) (raspagem leve de HTML)
 - ou [Puppeteer](https://pptr.dev/) (raspagem de páginas dinâmicas)
