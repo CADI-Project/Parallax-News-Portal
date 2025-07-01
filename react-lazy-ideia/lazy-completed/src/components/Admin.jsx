@@ -58,7 +58,7 @@ const Admin = () => {
                 fontWeight: "bold",
               }}
             >
-              Ler mais
+              Ler mais...
             </a>
           </div>
         </section>
