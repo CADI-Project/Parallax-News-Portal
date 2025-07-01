@@ -18,37 +18,51 @@ const Admin = () => {
   return (
     <main className="admin">
       <AdminHello />
-      <h2>Admin</h2>
       {error && <p style={{ color: "red" }}>{error}</p>}
 
-      <h3>Fontes de notícias:</h3>
-      <ul>
-        {sources.map((source) => (
-          <li key={source.id}>
-            <strong>{source.name}</strong> - {source.description}
-          </li>
-        ))}
-      </ul>
-
-      <h3>Notícias com Imagem:</h3>
-      <ul>
-        {noticias.map((noticia, index) => (
-          <li key={index} style={{ marginBottom: "20px" }}>
-            <h4>{noticia.title}</h4>
-            {noticia.urlToImage && (
-              <img
-                src={noticia.urlToImage}
-                alt={noticia.title}
-                style={{ maxWidth: "300px" }}
-              />
-            )}
+      {noticias.slice(0, 5).map((noticia, index) => (
+        <section
+          key={index}
+          className=""
+          style={{
+            backgroundImage: `url(${noticia.urlToImage})`,
+            backgroundAttachment: "fixed",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            minHeight: "100vh",
+            color: "white",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "2rem",
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "#000",
+              padding: "2rem",
+              borderRadius: "1rem",
+              maxWidth: "700px",
+            }}
+          >
+            <h1>{noticia.title}</h1>
             <p>{noticia.description}</p>
-            <a href={noticia.url} target="_blank" rel="noopener noreferrer">
+            <a
+              href={noticia.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "#ffd700",
+                textDecoration: "underline",
+                fontWeight: "bold",
+              }}
+            >
               Ler mais
             </a>
-          </li>
-        ))}
-      </ul>
+          </div>
+        </section>
+      ))}
     </main>
   );
 };
